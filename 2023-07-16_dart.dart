@@ -66,5 +66,38 @@ void main() {
   nums.add(1);
   print(nums); // value in set is UNIQUE! 
   
+  print(sayHello('jjangcute'));
   
+  print(plus(1,9));
+  
+  introduceMyself(
+  age: 20,
+  country: 'germany',
+  name: 'jjangcute');
 }
+
+// function
+String sayHello(String name){ // it doesn't return anything
+  return "Hello $name nice to meet you !";
+}
+
+// if you have only one line function
+num plus(num x, num y) => x + y;
+
+// named parameters : you don't need to remember parameters's order, if you add "{param1, param2 ...}"
+// AND dart worried about null value(if user doesn't give you some value...)
+// you do this ! 1) give default value
+//String introduceMyself(
+// {  String name = 'deana',
+//   int age = 99,
+//   String country = 'espana'}){
+//   return "I'm $name, I'm $age, I come from $country";
+// }
+// OR 2) you can use "required" ! -> I prefer to do this
+String introduceMyself(
+{ required String name,
+  required int age,
+  required String country}){
+  return "I'm $name, I'm $age, I come from $country";
+}
+
